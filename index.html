@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>제주 오름</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+        header {
+            display: flex;
+        }
+
+        button {
+            height: fit-content;
+            margin: 19px 0 0 10px;
+        }
+
+        #map {
+            height: 700px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>제주 오름을 확인해보세요!!</h3>
+        <button id="btn-reset">초기화</button>
+    </header>
+    <div id="map"></div>
+    <script src="./marker.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnkJbYFNiUwh99-sUtXZWyPTKBjsywyGE&callback=initMap">
+    </script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
