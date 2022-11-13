@@ -7,4 +7,5 @@ https://www.data.go.kr/tcs/dss/selectFileDataDetailView.do?publicDataPk=15096996
 https://yjlee9909.github.io/Jeju_Oreum_map/
 
 ## 추가 예정
+- 다른 마커 클릭 시 이전 정보 창 삭제 구현하기
 - 디자인 추가할 예정입니다.
