@@ -17,10 +17,6 @@ async function initMap() {
     }
     console.log(dataList);
 
-    // dataList에서 위도 경도 뽑아서 출력하기
-
-    // 마커 찍기
-
     const jeju = { lat: 33.3616658, lng: 126.5204118 };
     const map = new google.maps.Map(
         document.getElementById("map"),
@@ -35,9 +31,6 @@ async function initMap() {
             position: {lat: parseFloat(dataList[idx].위도), lng: parseFloat(dataList[idx].경도)},
             map: map,
         });
-
-        const 오름명 = document.querySelector('.name');
-        const 설명 = document.querySelector('.cont');
         // 내용 넣기
         marker.addListener('click', () => {
             const infowindow = new google.maps.InfoWindow({
