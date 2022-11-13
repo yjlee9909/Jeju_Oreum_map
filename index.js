@@ -1,4 +1,8 @@
 let dataList = [];
+let infowindow_contents = [];
+let info_cnt = 0;
+
+const allMarkerBtn = document.querySelector('#allMarker');
 async function initMap() {
     
     // 데이터 불러오기
@@ -21,7 +25,7 @@ async function initMap() {
     const map = new google.maps.Map(
         document.getElementById("map"),
         {
-            zoom: 10,
+            zoom: 11,
             center: jeju,
         }
     );
@@ -31,12 +35,22 @@ async function initMap() {
             position: {lat: parseFloat(dataList[idx].위도), lng: parseFloat(dataList[idx].경도)},
             map: map,
         });
+
+        const 오름명 = document.querySelector('.name');
+        const 설명 = document.querySelector('.cont');
+        // 내용 넣기
+        marker.addListener('click', () => {
+            const infowindow = new google.maps.InfoWindow({
+                content: `
+                <div>
+                    <h4 class="name">${dataList[idx].오름명}</h4>
+                    <p class='cont'>${dataList[idx].설명}</p>
+                </div>
+                `,
+            });
+            infowindow.open(map, marker);
+        })
+        
     }
-    
-
 }
-
-
-
-
-
+window.initMap = initMap;
