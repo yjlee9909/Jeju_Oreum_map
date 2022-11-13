@@ -7,5 +7,4 @@ https://www.data.go.kr/tcs/dss/selectFileDataDetailView.do?publicDataPk=15096996
 https://yjlee9909.github.io/Jeju_Oreum_map/
 
 ## 추가 예정
-- 마커 누르면 오름명과 설명을 추가할 예정입니다.
 - 디자인 추가할 예정입니다.
